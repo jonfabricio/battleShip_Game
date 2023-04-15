@@ -1,6 +1,6 @@
-from games.battleship.players.greedy import GreedyBattleshipPlayer
-from games.battleship.players.random import RandomBattleshipPlayer
-from games.battleship.simulator import BattleshipSimulator
+from games.battleship.players.greedy import GreedyBattleShipPlayer
+from games.battleship.players.random import RandomBattleShipPlayer
+from games.battleship.simulator import BattleShipSimulator
 from games.game_simulator import GameSimulator
 
 
@@ -29,27 +29,27 @@ def main():
         #},
         {
             "name": "Battleship - Random VS Random",
-            "player1": RandomBattleshipPlayer("Random 1"),
-            "player2": RandomBattleshipPlayer("Random 2")
+            "player1": RandomBattleShipPlayer("Random 1"),
+            "player2": RandomBattleShipPlayer("Random 2")
         },
         {
             "name": "Battleship - Greedy VS Random",
-            "player1": GreedyBattleshipPlayer("Greedy"),
-            "player2": RandomBattleshipPlayer("Random")
+            "player1": GreedyBattleShipPlayer("Greedy"),
+            "player2": RandomBattleShipPlayer("Random")
         },
         {
             "name": "Minimax VS Random",
-            "player2": RandomBattleshipPlayer("Random")
+            "player2": RandomBattleShipPlayer("Random")
         },
         {
             "name": "Minimax VS Greedy",
-            "player2": GreedyBattleshipPlayer("Greedy")
+            "player2": GreedyBattleShipPlayer("Greedy")
         }
     ]
 
     for sim in c4_simulations:
-        run_simulation(sim["name"], BattleshipSimulator(sim["player1"], sim["player2"]), num_iterations)
+        run_simulation(sim["name"], BattleShipSimulator(sim["player1"], sim["player2"]), num_iterations)
 
 if __name__ == "__main__":
-    main()
+    __name__
 
